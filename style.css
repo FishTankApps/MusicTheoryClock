@@ -1,10 +1,18 @@
+
+@font-face {
+    font-family: ReemKufi;
+    src: url(REEMKUFI-BOLD.TTF);
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
-    font-family: sans-serif;   
+    font-family: ReemKufi;
 }
 
 body {
-    background: #ececec;
+    background: linear-gradient(45deg, rgb(65, 27, 148) 0%,
+                                       rgb(169, 241, 255) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,36 +21,54 @@ body {
 }
 
 .clock {
-    width: 400px;
-    height: 400px;
-    background: #FFFFFF80;
+    width: 500px;
+    height: 500px;
+    background: #ffffffe0;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 10px solid #000000ce;
     position: relative;
 }
 
-.clock .number {
+.clock .number-box {
     --rotation: 0deg;
     position: absolute;
     width: 100%;
     height: 100%;
-    font-size: 1.5rem;
-
-    text-align: center;
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
     transform: rotate(var(--rotation));
 }
 
-.clock .number-1 { --rotation: 30deg;}
-.clock .number-2 { --rotation: 60deg;}
-.clock .number-3 { --rotation: 90deg;}
-.clock .number-4 { --rotation: 120deg;}
-.clock .number-5 { --rotation: 150deg;}
-.clock .number-6 { --rotation: 180deg;}
-.clock .number-7 { --rotation: 210deg;}
-.clock .number-8 { --rotation: 240deg;}
-.clock .number-9 { --rotation: 270deg;}
-.clock .number-10 { --rotation: 300deg;}
-.clock .number-11 { --rotation: 330deg;}
+.clock .box-1 { --rotation: 30deg;}
+.clock .box-2 { --rotation: 60deg;}
+.clock .box-3 { --rotation: 90deg;}
+.clock .box-4 { --rotation: 120deg;}
+.clock .box-5 { --rotation: 150deg;}
+.clock .box-6 { --rotation: 180deg;}
+.clock .box-7 { --rotation: 210deg;}
+.clock .box-8 { --rotation: 240deg;}
+.clock .box-9 { --rotation: 270deg;}
+.clock .box-10 { --rotation: 300deg;}
+.clock .box-11 { --rotation: 330deg;}
+
+.clock .number {
+    text-align: center;
+    width: 20%;
+    height: fit-content;
+}
+
+.clock .number-1 {transform:  rotate(-30deg);}
+.clock .number-2 {transform:  rotate(-60deg);}
+.clock .number-3 {transform:  rotate(-90deg);}
+.clock .number-4 {transform:  rotate(-120deg);}
+.clock .number-5 {transform:  rotate(-150deg);}
+.clock .number-6 {transform:  rotate(-180deg);}
+.clock .number-7 {transform:  rotate(-210deg);}
+.clock .number-8 {transform:  rotate(-240deg);}
+.clock .number-9 {transform:  rotate(-270deg);}
+.clock .number-10 {transform:  rotate(-300deg);}
+.clock .number-11 {transform:  rotate(-330deg);}
 
 .clock::after {
     content: '';
