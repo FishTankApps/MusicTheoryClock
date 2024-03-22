@@ -1,7 +1,17 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CheerpJ test</title>
+    <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
+  </head>
+  <body>
+    <script>
+      (async function () {
+        await cheerpjInit();
+        cheerpjCreateDisplay(800, 600);
+        await cheerpjRunJar("/app/my_application_archive.jar");
+      })();
+    </script>
+  </body>
 </html>
